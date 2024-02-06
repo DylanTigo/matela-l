@@ -15,6 +15,8 @@
 $white: #ffffff;
 $primary: #f82833;
 $secondary: #e1dcdc;
+$success: #66E264;
+$warning: #E7A05E;
 
 $box-shadow: 0px 2px 10px rgba($black, 0.15);
 
@@ -257,5 +259,61 @@ $theme-colors: (
     border: none;
   }
 }
+.filter{
+  display: inline-block;
+  padding: 10px;
 
+  .accordion{
+    width: 25vw;
+    border: none;
+    border-radius: 30px;
+    
+    
+    .accordion-item{
+      margin-bottom: 5px;
+      border: 1px solid $secondary;
+      border-radius: 5px;
+    }
+    .accordion-header{
+      
+      button{
+        background-color: $secondary;
+        padding: 10px;
+
+        &:focus{
+          box-shadow: none;
+        }
+
+        &::after{
+          background-size: 15px;
+          width: 15px;
+          height: 15px;
+        }
+      }
+    }
+  }
+}
+
+.list{
+
+  a{
+    color: $white;
+    text-decoration: none;
+
+    &:hover{
+      color: $secondary;
+    }
+  }
+}
+
+
+.cardContainer{
+  background: $secondary;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  flex-wrap: wrap;
+  height: 120vh;
+  overflow-y: scroll;
+
+}
 @import "node_modules/bootstrap/scss/bootstrap";
