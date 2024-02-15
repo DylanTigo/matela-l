@@ -307,13 +307,15 @@ $theme-colors: (
 }
 
 
-.cardContainer{
-  background: $secondary;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  flex-wrap: wrap;
-  height: 120vh;
+.firstCardContainer{
   overflow-y: scroll;
+  max-height: 100vh;
 
+  .cardContainer{
+    background: $secondary;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    flex-wrap: wrap;
+  }
 }
 @import "node_modules/bootstrap/scss/bootstrap";

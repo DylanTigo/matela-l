@@ -41,7 +41,7 @@ export function ProductCard({ product }) {
   }
 
   return (
-    <article className="landingArticle w-auto ">
+    <article className="landingArticle w-auto h-auto">
       <a href={product.id}>
         <img
           src={product.photos[0] ? product.photos[0] : defaultImg}

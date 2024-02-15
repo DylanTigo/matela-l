@@ -1,15 +1,31 @@
 import { Footer } from "./Components/Footer/Footer";
 import { Header } from "./Components/Header/Header";
 import { Accordion } from "react-bootstrap";
-import datas from "../product.json"
+import datas from "../product.json";
 import { ProductCard } from "./Components/Card/ProductCard";
+import { useEffect, useState } from "react";
 
 export function Rechercher() {
+  const [productList, setProductList] = useState([]);
+  const [filteredProduct, setFilteredProduct] = useState([]);
 
-  const productList = datas.products
+  useEffect(() => {
+    setProductList(datas.products)
+    setFilteredProduct(datas.products)
+  }, [datas.products])
+  
+  function onSearch(searchTerm) {
+    
+    const filteredProduct = productList.filter(
+      (product) =>
+        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        product.type.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredProduct(filteredProduct);
+  }
   return (
     <>
-      <Header />
+      <Header onSearch={onSearch} />
       <div className=" d-flex">
         <aside className="filter d-none  d-md-inline-block">
           <p className=" fs-5 ms-3 ">Filtres</p>
@@ -62,7 +78,7 @@ export function Rechercher() {
           </Accordion>
         </aside>
 
-        <main className=" d-inline-block w-100 mb-3 rounded" >
+        <main className=" d-inline-block w-100 mb-3 rounded">
           <div className=" d-flex justify-content-between">
             <div className="resultat">
               145 resultatas trouver pour:{" "}
@@ -82,11 +98,13 @@ export function Rechercher() {
               </select>
             </div>
           </div>
-          <div className="cardContainer mt-3 px-3 py-4 gap-3">{
-            productList.map((product, index) => (
-              <ProductCard product={product} key={product.name  + index} />
-            ))
-          }</div>
+          <div className="firstCardContainer">
+            <div className="cardContainer mt-3 px-3 py-4 gap-3">
+              {filteredProduct.map((product, index) => (
+                <ProductCard product={product} key={product.name + index} />
+              ))}
+            </div>
+          </div>
         </main>
       </div>
       <Footer />

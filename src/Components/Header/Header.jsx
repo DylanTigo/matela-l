@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { SearchBar } from "../SearchBar/SearchBar";
 import { Logo } from "../Logo/Logo";
 import { LuHeart, LuMenu, LuShoppingCart } from "react-icons/lu";
@@ -5,12 +6,12 @@ import { CgProfile } from "react-icons/cg";
 import { NavIcon } from "../NavIcon/NavIcon";
 import { Button } from "../Button/Button";
 
-export function Header() {
+export function Header({onSearch}) {
   return (
     <header className="header container-fluid pt-1 mb-3">
       <div className="navbar">
         <Logo className=" navbar-brand" />
-        <SearchBar />
+        <SearchBar onSearch = {onSearch}/>
         <nav className="navIconGroup">
           <NavIcon icon={<LuMenu />} />
           <NavIcon icon={<LuHeart />} />
