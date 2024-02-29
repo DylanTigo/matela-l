@@ -4,36 +4,38 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import datas from "../product.json";
+import { getRatingStars, showCurrentPrice, disponibility } from "./utils";
 
 import img1 from "./assets/imgSofa/img1.jpg";
 import img2 from "./assets/imgSofa/img2.jpg";
 import img3 from "./assets/imgSofa/img3.jpg";
 import img4 from "./assets/imgSofa/img4.jpg";
+import favorite from "./assets/favorite.svg";
+import { LuShoppingCart } from "react-icons/lu";
 
 export default function Produit() {
   const params = useParams();
   const product =
     datas.products.find((product) => product.id === +params.id) || {};
-  const imgUrl = "/assets/imgSofa";
-
   const [currentImg, setCurrentImg] = useState(img1);
 
-  console.log(currentImg);
+  const [color, dispoInfo] = disponibility();
+  console.log(product.comment.length);
   function changeImg(img) {
     setCurrentImg(img);
   }
   return (
-    <main>
-      <section className="productDetail mb-5 ">
-        <div className="imgSlider w-50">
-          <div className="imgContainer">
-            <img src={currentImg} className="currentImg w-100" alt="" />
+    <main className="  ">
+      <section className="productDetail mb-5 mx-3 d-flex flex-column flex-md-row ">
+        <div className="imgSliderP">
+          <div className="mainImg">
+            <img src={currentImg} className="currentImg img-fluid " alt="" />
             <div className="sliderBtn">
               <span className="leftBtn"></span>
               <span className="rightBtn"></span>
             </div>
           </div>
-          <ul className="sliderImages list-unstyled d-flex gap-2">
+          <ul className="sliderImage list-unstyled gap-2">
             <li onClick={() => changeImg(img1)}>
               <img src={img1} alt="" />
             </li>
@@ -47,6 +49,69 @@ export default function Produit() {
               <img src={img4} alt="" />
             </li>
           </ul>
+        </div>
+        <div className="detailContainer">
+          <div className="w-75 mx-auto d-flex flex-column gap-3">
+            <h2 className=" h2 d-flex justify-content-between align-items-center ">
+              {product.name}{" "}
+              <span className="favorite">
+                <img src={favorite} alt="favorite icon" />
+              </span>
+            </h2>
+            <div>
+              <div className="description m-1">
+                <strong>Description : </strong>
+                {product.description}
+              </div>
+              <div className="marque">
+                <strong>Marque : </strong>
+                {product.brand}
+              </div>
+            </div>
+            {product.promotion ? (
+              <div className="h2">
+                {" "}
+                {showCurrentPrice(product)}{" "}
+                <span className=" fs-6 text-decoration-line-through ">
+                  {product.price}
+                </span>
+              </div>
+            ) : (
+              <div className="h2">{product.price} </div>
+            )}
+
+            <div className="rating">
+              {getRatingStars(product)}
+              <span className=" text-decoration-underline ms-3 ">
+                {product.comment.length} Commentaires
+              </span>
+            </div>
+
+            <div className=" d-flex gap-2 align-items-center">
+              <span
+                style={{ backgroundColor: color, width: 15, height: 15 }}
+                className=" rounded-5 "
+              ></span>
+              <span>{dispoInfo}</span>
+            </div>
+
+            <div className="colorCotainer">
+              <div className=" mb-2 ">Couleurs</div>
+              <div className="colors">
+                <button className="couleur selected"></button>
+                <button className="couleur"></button>
+                <button className="couleur"></button>
+                <button className="couleur"></button>
+              </div>
+            </div>
+
+            <button className="addProductBtn mt-3 d-flex justify-content-center gap-2 p-2  border-0 ">
+              Ajouter au panier{" "}
+              <span>
+                <LuShoppingCart />
+              </span>
+            </button>
+          </div>
         </div>
       </section>
     </main>

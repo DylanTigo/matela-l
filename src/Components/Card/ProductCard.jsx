@@ -1,45 +1,15 @@
 /* eslint-disable react/prop-types */
-import { FullStar } from "../Star/FullStar";
-import { HalfStar } from "../Star/HalfStar";
-import { EmptyStar } from "../Star/EmptyStar";
-import promotionPourcentage from "../../utils";
 import defaultImg from "../../assets/defaultImg.png";
 import s from "./style.module.css";
 import { Link } from "react-router-dom";
+import {getRatingStars, showCurrentPrice, disponibility} from "../../utils.jsx";
 
 export function ProductCard({ product }) {
-  const disponibility = () => {
-    let isAvailable = Math.trunc(Math.random() * 4);
-    if (isAvailable) {
-      return ["#66E264", "En stock"];
-    }
-    return ["#E7A05E", "Bientot disponible"];
-  };
+  
   const [color, dipoInfo] = disponibility();
 
-  const stars = [];
-  const nbrFullstar = Math.floor(product.rating);
-  const nbrEmptystar = 5 - Math.ceil(product.rating);
-  const nbrHalfstar = 5 - nbrEmptystar - nbrFullstar;
-
-  for (let i = 0; i < nbrFullstar; i++) {
-    stars.push(<FullStar key={"Fullstar" + i} />);
-  }
-  if (nbrHalfstar > 0) {
-    stars.push(<HalfStar key="HalfStar" />);
-  }
-  for (let i = 0; i < nbrEmptystar; i++) {
-    stars.push(<EmptyStar key={"EmptyStar" + i} />);
-  }
-  function showCurrentPrice() {
-    let currentPrice;
-    if (product.promotion === true) {
-      currentPrice = product.price - product.price * promotionPourcentage;
-    } else {
-      currentPrice = product.price;
-    }
-    return parseFloat(currentPrice.toFixed(2));
-  }
+  const ratingStars = getRatingStars(product);
+  const currentPrice = showCurrentPrice(product); 
 
   return (
     <article className="landingArticle w-auto h-auto">
@@ -58,7 +28,7 @@ export function ProductCard({ product }) {
           {/* Affichages du rating */}
           <div className=" d-flex justify-content-start align-items-end w-100">
             <div className="starGroup">
-              {stars}{" "}
+              {ratingStars}{" "}
               <span className={s.avis}>
                 ({Math.trunc(Math.random() * 50)} avis)
               </span>
@@ -67,7 +37,7 @@ export function ProductCard({ product }) {
 
           {/* Affichage du prix */}
           <div className="">
-            <span className={s.price}>${showCurrentPrice()}</span>
+            <span className={s.price}>${currentPrice}</span>
             {product.promotion && (
               <span className="text-decoration-line-through">
                 ${product.price}
