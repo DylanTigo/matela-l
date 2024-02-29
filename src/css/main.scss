@@ -15,8 +15,8 @@
 $white: #ffffff;
 $primary: #f82833;
 $secondary: #e1dcdc;
-$success: #66E264;
-$warning: #E7A05E;
+$success: #66e264;
+$warning: #e7a05e;
 
 $box-shadow: 0px 2px 10px rgba($black, 0.15);
 
@@ -28,7 +28,7 @@ $theme-colors: (
   "info": #b2dddd,
   "success": #7ad020,
   "warning": #fece9a,
-  "danger": #fe2a72
+  "danger": #fe2a72,
 );
 
 .navIcon {
@@ -61,6 +61,7 @@ $theme-colors: (
   }
 
   input {
+    width: 0%;
     border: none;
     background: transparent;
     flex-grow: 1;
@@ -72,7 +73,7 @@ $theme-colors: (
     border: none;
     border-radius: 9999px;
     font-size: 18px;
-    width: 55px;
+    width: 45px;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -83,6 +84,13 @@ $theme-colors: (
       color: #e1dcdc;
       background: #f82833;
     }
+  }
+}
+@media (max-width: 700px) {
+  .inputSearchContainer {
+    order: 4;
+    min-width: 80%;
+    margin: 10px auto;
   }
 }
 .firstNav {
@@ -150,6 +158,7 @@ $theme-colors: (
     min-width: max-content;
   }
 }
+
 #nosProduits {
   .cardContainer {
     button {
@@ -183,21 +192,20 @@ $theme-colors: (
 
 .landingArticle {
   display: flex;
-  width: 280px;
+  max-width: 280px;
   padding: 10px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 5px;
   background: $white;
-  min-width: 260px;
   cursor: pointer;
 
-  a{
+  a {
     width: 100%;
   }
 
-  img{
+  img {
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -205,8 +213,14 @@ $theme-colors: (
     height: 200px;
   }
 }
-
-.getInTouchContainer{
+#bestSeller {
+  @media (max-width: 570px) {
+    .landingArticle {
+      min-width: 95%;
+    }
+  }
+}
+.getInTouchContainer {
   background-image: url(../assets/getIntouchBG.jpg);
   background-size: cover;
   background-position-y: 80%;
@@ -215,20 +229,20 @@ $theme-colors: (
   justify-content: flex-end;
   align-items: center;
 
-  .containt{
+  .containt {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 15px;
 
-    .inputSearchContainer{
+    .inputSearchContainer {
       width: 90%;
     }
   }
 }
 
-.footer{
+.footer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,13 +252,19 @@ $theme-colors: (
   font-size: 14px;
   padding-block: 40px;
 
-  .newletterContainer{
+  .newletterContainer {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
+
+    p {
+      font-size: 14px;
+      font-weight: 400;
+      max-width: 82%;
+    }
   }
 
-  .inputContainer{
+  .inputContainer {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -254,37 +274,35 @@ $theme-colors: (
       outline: 1px solid $primary;
     }
   }
-  input{
+  input {
     outline: none;
     border: none;
   }
 }
-.filter{
+.filter {
   display: inline-block;
   padding: 10px;
 
-  .accordion{
+  .accordion {
     width: 25vw;
     border: none;
     border-radius: 30px;
-    
-    
-    .accordion-item{
+
+    .accordion-item {
       margin-bottom: 5px;
       border: 1px solid $secondary;
       border-radius: 5px;
     }
-    .accordion-header{
-      
-      button{
+    .accordion-header {
+      button {
         background-color: $secondary;
         padding: 10px;
 
-        &:focus{
+        &:focus {
           box-shadow: none;
         }
 
-        &::after{
+        &::after {
           background-size: 15px;
           width: 15px;
           height: 15px;
@@ -294,28 +312,40 @@ $theme-colors: (
   }
 }
 
-.list{
-
-  a{
+.list {
+  a {
     color: $white;
     text-decoration: none;
 
-    &:hover{
+    &:hover {
       color: $secondary;
     }
   }
 }
 
-
-.firstCardContainer{
+.firstCardContainer {
   overflow-y: scroll;
   max-height: 100vh;
 
-  .cardContainer{
+  .cardContainer {
     background: $secondary;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     flex-wrap: wrap;
   }
 }
+
+.productDetail {
+  li {
+    width: 25%;
+    height: 150px;
+    overflow: hidden;
+
+    img {
+      height: 100px;
+      object-fit: cover;
+    }
+  }
+}
+
 @import "node_modules/bootstrap/scss/bootstrap";

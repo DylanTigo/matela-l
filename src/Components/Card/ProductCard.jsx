@@ -5,6 +5,7 @@ import { EmptyStar } from "../Star/EmptyStar";
 import promotionPourcentage from "../../utils";
 import defaultImg from "../../assets/defaultImg.png";
 import s from "./style.module.css";
+import { Link } from "react-router-dom";
 
 export function ProductCard({ product }) {
   const disponibility = () => {
@@ -42,7 +43,7 @@ export function ProductCard({ product }) {
 
   return (
     <article className="landingArticle w-auto h-auto">
-      <a href={product.id}>
+      <Link to={"/produit/"+ product.name} style={{textDecoration: "none", color: "inherit"}} href={product.id}>
         <img
           src={product.photos[0] ? product.photos[0] : defaultImg}
           alt={`Image de ${product.name}`}
@@ -83,7 +84,7 @@ export function ProductCard({ product }) {
             <span>{dipoInfo}</span>
           </div>
         </div>
-      </a>
+      </Link>
     </article>
   );
 }

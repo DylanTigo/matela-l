@@ -5,14 +5,15 @@ import { LuHeart, LuMenu, LuShoppingCart } from "react-icons/lu";
 import { CgProfile } from "react-icons/cg";
 import { NavIcon } from "../NavIcon/NavIcon";
 import { Button } from "../Button/Button";
+import { Link } from "react-router-dom";
 
-export function Header({onSearch}) {
+export function Header({ onSearch }) {
   return (
-    <header className="header container-fluid pt-1 mb-3">
+    <header className="header container-fluid pt-1 mb-3 flex-nowrap flex-md-wrap">
       <div className="navbar">
         <Logo className=" navbar-brand" />
-        <SearchBar onSearch = {onSearch}/>
-        <nav className="navIconGroup">
+        <SearchBar onSearch={onSearch} />
+        <nav className="navIconGroup ">
           <NavIcon icon={<LuMenu />} />
           <NavIcon icon={<LuHeart />} />
           <NavIcon icon={<LuShoppingCart />} />
@@ -20,6 +21,7 @@ export function Header({onSearch}) {
         </nav>
       </div>
       <div className="d-flex justify-content-center flex-wrap column-gap-3 row-gap-2">
+        <Link></Link>
         <Button content="Matelas" btnType="dropdown" />
         <Button content="Salle a manger" btnType="dropdown" />
         <Button content="Table" btnType="dropdown" />

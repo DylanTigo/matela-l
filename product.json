@@ -1,5 +1,7 @@
-{"products" : [
+{
+  "products": [
     {
+      "id": 1,
       "name": "Chaise Ergonomique",
       "description": "Une chaise ergonomique conçue pour un confort optimal.",
       "type": "chaise",
@@ -10,27 +12,26 @@
       "percentage_promotion": 15,
       "rating": 4.5,
       "available_colors": ["Gris", "Noir", "Bleu"],
-      "photos": ["", "", "", ""],
+      "photos": ["img1.jpg", "", "", ""],
       "comment": [
         {
           "user": {
             "name": "Sophie",
             "profile_photo": ""
           },
-          "comment":
-            "Cette chaise est incroyablement confortable. Je l'utilise pour travailler pendant des heures sans aucun problème."
+          "comment": "Cette chaise est incroyablement confortable. Je l'utilise pour travailler pendant des heures sans aucun problème."
         },
         {
           "user": {
             "name": "Alexandre",
             "profile_photo": ""
           },
-          "comment":
-            "La qualité de cette chaise est remarquable. Je suis très satisfait de mon achat."
+          "comment": "La qualité de cette chaise est remarquable. Je suis très satisfait de mon achat."
         }
       ]
     },
     {
+      "id": 2,
       "name": "Lit Double Moderne",
       "description": "Un lit double au design moderne et élégant.",
       "type": "lit",
@@ -45,20 +46,19 @@
       "comment": [
         {
           "user": { "name": "Laura", "profile_photo": "lien_photo_laura.jpg" },
-          "comment":
-            "Ce lit est magnifique. Il donne une touche moderne à ma chambre."
+          "comment": "Ce lit est magnifique. Il donne une touche moderne à ma chambre."
         },
         {
           "user": {
             "name": "Nicolas",
             "profile_photo": ""
           },
-          "comment":
-            "J'aime beaucoup ce lit, il est solide et confortable. Je le recommande vivement."
+          "comment": "J'aime beaucoup ce lit, il est solide et confortable. Je le recommande vivement."
         }
       ]
     },
     {
+      "id": 3,
       "name": "Sofa Convertible",
       "description": "Un sofa convertible pratique pour un salon moderne.",
       "type": "Sofa",
@@ -76,20 +76,18 @@
             "name": "Julien",
             "profile_photo": ""
           },
-          "comment":
-            "Ce sofa est très pratique, surtout lorsqu'on reçoit des invités à dormir."
+          "comment": "Ce sofa est très pratique, surtout lorsqu'on reçoit des invités à dormir."
         },
         {
           "user": { "name": "Marie", "profile_photo": "lien_photo_marie.jpg" },
-          "comment":
-            "Je suis ravie de mon achat. Ce sofa est confortable et la couleur correspond parfaitement à ma décoration."
+          "comment": "Je suis ravie de mon achat. Ce sofa est confortable et la couleur correspond parfaitement à ma décoration."
         }
       ]
     },
     {
+      "id": 4,
       "name": "Bureau Moderne",
-      "description":
-        "Un bureau moderne avec un design épuré, idéal pour un espace de travail contemporain.",
+      "description": "Un bureau moderne avec un design épuré, idéal pour un espace de travail contemporain.",
       "type": "bureau",
       "brand": "DesignOffice",
       "price": 399.99,
@@ -102,23 +100,21 @@
       "comment": [
         {
           "user": { "name": "Lucie", "profile_photo": "" },
-          "comment":
-            "Ce bureau est parfait pour mon espace de travail à domicile. Très facile à assembler et de bonne qualité."
+          "comment": "Ce bureau est parfait pour mon espace de travail à domicile. Très facile à assembler et de bonne qualité."
         },
         {
           "user": {
             "name": "Pierre",
             "profile_photo": ""
           },
-          "comment":
-            "J'adore ce bureau. Il est spacieux et son design est vraiment élégant."
+          "comment": "J'adore ce bureau. Il est spacieux et son design est vraiment élégant."
         }
       ]
     },
     {
+      "id": 5,
       "name": "Matelas Orthopédique",
-      "description":
-        "Un matelas orthopédique conçu pour un sommeil réparateur et un soutien optimal du dos.",
+      "description": "Un matelas orthopédique conçu pour un sommeil réparateur et un soutien optimal du dos.",
       "type": "matela",
       "brand": "DreamSleep",
       "price": 899.99,
@@ -131,23 +127,21 @@
       "comment": [
         {
           "user": { "name": "Julie", "profile_photo": "lien_photo_julie.jpg" },
-          "comment":
-            "Ce matelas a transformé mes nuits. Je me réveille chaque matin sans douleur et reposée."
+          "comment": "Ce matelas a transformé mes nuits. Je me réveille chaque matin sans douleur et reposée."
         },
         {
           "user": {
             "name": "Antoine",
             "profile_photo": ""
           },
-          "comment":
-            "J'ai longtemps hésité avant de l'acheter, mais je ne regrette pas. Un confort exceptionnel."
+          "comment": "J'ai longtemps hésité avant de l'acheter, mais je ne regrette pas. Un confort exceptionnel."
         }
       ]
     },
     {
+      "id": 6,
       "name": "Étagère Murale Design",
-      "description":
-        "Une étagère murale au design contemporain pour mettre en valeur vos objets de décoration.",
+      "description": "Une étagère murale au design contemporain pour mettre en valeur vos objets de décoration.",
       "type": "etagère",
       "brand": "DecoTrend",
       "price": 149.99,
@@ -163,23 +157,21 @@
             "name": "Sophie",
             "profile_photo": ""
           },
-          "comment":
-            "Cette étagère est parfaite pour exposer mes livres et bibelots. Elle ajoute une touche moderne à ma pièce."
+          "comment": "Cette étagère est parfaite pour exposer mes livres et bibelots. Elle ajoute une touche moderne à ma pièce."
         },
         {
           "user": {
             "name": "Thomas",
             "profile_photo": ""
           },
-          "comment":
-            "Facile à installer et très solide. Je suis satisfait de cet achat."
+          "comment": "Facile à installer et très solide. Je suis satisfait de cet achat."
         }
       ]
     },
     {
+      "id": 7,
       "name": "Chaise de Bureau Ergonomique",
-      "description":
-        "Une chaise de bureau ergonomique conçue pour un confort optimal pendant de longues heures de travail.",
+      "description": "Une chaise de bureau ergonomique conçue pour un confort optimal pendant de longues heures de travail.",
       "type": "chaise de bureau",
       "brand": "ErgoTech",
       "price": 299.99,
@@ -192,9 +184,9 @@
       "comment": []
     },
     {
+      "id": 8,
       "name": "Lit Enfant avec Rangement",
-      "description":
-        "Un lit pour enfant avec des tiroirs de rangement intégrés, idéal pour maximiser l'espace dans une chambre d'enfant.",
+      "description": "Un lit pour enfant avec des tiroirs de rangement intégrés, idéal pour maximiser l'espace dans une chambre d'enfant.",
       "type": "lit",
       "brand": "KidSpace",
       "price": 499.99,
@@ -206,16 +198,18 @@
       "photos": ["", "", "", ""],
       "comment": [
         {
-          "user": { "name": "Marine", "profile_photo": "lien_photo_marine.jpg" },
-          "comment":
-            "Mon fils adore son nouveau lit ! Les tiroirs sont très pratiques pour ranger ses jouets."
+          "user": {
+            "name": "Marine",
+            "profile_photo": "lien_photo_marine.jpg"
+          },
+          "comment": "Mon fils adore son nouveau lit ! Les tiroirs sont très pratiques pour ranger ses jouets."
         }
       ]
     },
     {
+      "id": 9,
       "name": "Sofa d'Angle Convertible",
-      "description":
-        "Un sofa d'angle convertible avec un design moderne, parfait pour un salon spacieux.",
+      "description": "Un sofa d'angle convertible avec un design moderne, parfait pour un salon spacieux.",
       "type": "sofa",
       "brand": "Moderno",
       "price": 899.99,
@@ -228,20 +222,18 @@
       "comment": [
         {
           "user": { "name": "Paul", "profile_photo": "lien_photo_paul.jpg" },
-          "comment":
-            "Ce sofa est incroyablement confortable, et sa fonction convertible est très pratique lorsque j'ai des invités."
+          "comment": "Ce sofa est incroyablement confortable, et sa fonction convertible est très pratique lorsque j'ai des invités."
         },
         {
           "user": { "name": "Camille", "profile_photo": "" },
-          "comment":
-            "J'adore le design de ce sofa. Il s'intègre parfaitement dans mon salon moderne."
+          "comment": "J'adore le design de ce sofa. Il s'intègre parfaitement dans mon salon moderne."
         }
       ]
     },
     {
+      "id": 10,
       "name": "Sofa d'Angle Convertible",
-      "description":
-        "Un sofa d'angle convertible avec un design moderne, parfait pour un salon spacieux.",
+      "description": "Un sofa d'angle convertible avec un design moderne, parfait pour un salon spacieux.",
       "type": "sofa",
       "brand": "Moderno",
       "price": 899.99,
@@ -254,20 +246,18 @@
       "comment": [
         {
           "user": { "name": "Paul", "profile_photo": "" },
-          "comment":
-            "Ce sofa est incroyablement confortable, et sa fonction convertible est très pratique lorsque j'ai des invités."
+          "comment": "Ce sofa est incroyablement confortable, et sa fonction convertible est très pratique lorsque j'ai des invités."
         },
         {
           "user": { "name": "Camille", "profile_photo": "" },
-          "comment":
-            "J'adore le design de ce sofa. Il s'intègre parfaitement dans mon salon moderne."
+          "comment": "J'adore le design de ce sofa. Il s'intègre parfaitement dans mon salon moderne."
         }
       ]
     },
     {
+      "id": 11,
       "name": "Bureau d'Angle avec Étagères",
-      "description":
-        "Un bureau d'angle avec des étagères intégrées pour un espace de travail organisé et fonctionnel.",
+      "description": "Un bureau d'angle avec des étagères intégrées pour un espace de travail organisé et fonctionnel.",
       "type": "Bureau",
       "brand": "OfficeMaster",
       "price": 449.99,
@@ -280,15 +270,14 @@
       "comment": [
         {
           "user": { "name": "Alex", "profile_photo": "" },
-          "comment":
-            "Ce bureau est parfait pour mon coin de travail à domicile. Les étagères offrent un espace de rangement supplémentaire très pratique."
+          "comment": "Ce bureau est parfait pour mon coin de travail à domicile. Les étagères offrent un espace de rangement supplémentaire très pratique."
         }
       ]
     },
     {
+      "id": 12,
       "name": "Lit Superposé pour Enfants",
-      "description":
-        "Un lit superposé avec un design ludique, idéal pour économiser de l'espace dans une chambre d'enfants.",
+      "description": "Un lit superposé avec un design ludique, idéal pour économiser de l'espace dans une chambre d'enfants.",
       "type": "Lit",
       "brand": "KidSpace",
       "price": 599.99,
@@ -301,15 +290,14 @@
       "comment": [
         {
           "user": { "name": "Sophie", "profile_photo": "" },
-          "comment":
-            "Mes enfants adorent leur nouveau lit superposé ! C'est un excellent moyen d'optimiser l'espace dans leur chambre."
+          "comment": "Mes enfants adorent leur nouveau lit superposé ! C'est un excellent moyen d'optimiser l'espace dans leur chambre."
         }
       ]
     },
     {
+      "id": 13,
       "name": "Chaise Longue en Rotin",
-      "description":
-        "Une chaise longue en rotin tressé pour créer une atmosphère détendue dans votre jardin ou sur votre terrasse.",
+      "description": "Une chaise longue en rotin tressé pour créer une atmosphère détendue dans votre jardin ou sur votre terrasse.",
       "type": "Chaise",
       "brand": "GardenRelax",
       "price": 349.99,
@@ -322,20 +310,18 @@
       "comment": [
         {
           "user": { "name": "Jean", "profile_photo": "" },
-          "comment":
-            "Cette chaise longue est parfaite pour se détendre en plein air. La qualité du rotin est excellente."
+          "comment": "Cette chaise longue est parfaite pour se détendre en plein air. La qualité du rotin est excellente."
         },
         {
           "user": { "name": "Claire", "profile_photo": "" },
-          "comment":
-            "J'adore le design de cette chaise longue. Elle apporte une touche d'élégance à mon jardin."
+          "comment": "J'adore le design de cette chaise longue. Elle apporte une touche d'élégance à mon jardin."
         }
       ]
     },
     {
+      "id": 14,
       "name": "Table Basse en Verre",
-      "description":
-        "Une table basse élégante avec un plateau en verre trempé, parfaite pour mettre en valeur votre salon.",
+      "description": "Une table basse élégante avec un plateau en verre trempé, parfaite pour mettre en valeur votre salon.",
       "type": "Table",
       "brand": "GlassElegance",
       "price": 299.99,
@@ -348,9 +334,9 @@
       "comment": []
     },
     {
+      "id": 15,
       "name": "Canapé Modulaire",
-      "description":
-        "Un canapé modulaire avec des sections interchangeables pour créer différentes configurations selon vos besoins.",
+      "description": "Un canapé modulaire avec des sections interchangeables pour créer différentes configurations selon vos besoins.",
       "type": "Sofa",
       "brand": "Modulux",
       "price": 999.99,
@@ -363,8 +349,122 @@
       "comment": [
         {
           "user": { "name": "Luc", "profile_photo": "" },
-          "comment":
-            "Ce canapé modulaire est une excellente solution pour aménager mon salon selon mes besoins. Très confortable et polyvalent."
+          "comment": "Ce canapé modulaire est une excellente solution pour aménager mon salon selon mes besoins. Très confortable et polyvalent."
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Fauteuil Scandinave",
+      "description": "Un fauteuil au style scandinave avec des lignes épurées et un confort exceptionnel.",
+      "type": "fauteuil",
+      "brand": "NordicComfort",
+      "price": 349.99,
+      "material": "Bois et Tissu",
+      "promotion": true,
+      "percentage_promotion": 10,
+      "rating": 4.6,
+      "available_colors": ["Gris clair", "Beige", "Bleu"],
+      "photos": ["", "", "", ""],
+      "comment": [
+        {
+          "user": {
+            "name": "Emma",
+            "profile_photo": ""
+          },
+          "comment": "Ce fauteuil est magnifique et confortable. Il ajoute une touche de charme à mon salon."
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Bibliothèque Moderne",
+      "description": "Une bibliothèque au design moderne pour ranger vos livres et décorations.",
+      "type": "bibliothèque",
+      "brand": "ModernHome",
+      "price": 399.99,
+      "material": "Bois et Métal",
+      "promotion": false,
+      "percentage_promotion": 0,
+      "rating": 4.4,
+      "available_colors": ["Blanc", "Noir", "Chêne"],
+      "photos": ["", "", "", ""],
+      "comment": [
+        {
+          "user": {
+            "name": "Thomas",
+            "profile_photo": ""
+          },
+          "comment": "Cette bibliothèque est très pratique et elle a l'air superbe dans mon salon."
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Lampe de Bureau Industrielle",
+      "description": "Une lampe de bureau au style industriel pour éclairer votre espace de travail avec élégance.",
+      "type": "lampe",
+      "brand": "IndustrialLight",
+      "price": 79.99,
+      "material": "Métal",
+      "promotion": true,
+      "percentage_promotion": 15,
+      "rating": 4.2,
+      "available_colors": ["Noir", "Gris", "Rouge"],
+      "photos": ["", "", "", ""],
+      "comment": [
+        {
+          "user": {
+            "name": "Maxime",
+            "profile_photo": ""
+          },
+          "comment": "J'adore cette lampe de bureau. Elle est très stylée et fonctionnelle."
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "Tapis Shaggy Moderne",
+      "description": "Un tapis shaggy au design moderne pour ajouter une touche de confort à votre intérieur.",
+      "type": "tapis",
+      "brand": "ModernRugs",
+      "price": 199.99,
+      "material": "Polyester",
+      "promotion": true,
+      "percentage_promotion": 20,
+      "rating": 4.7,
+      "available_colors": ["Gris", "Beige", "Bleu"],
+      "photos": ["", "", "", ""],
+      "comment": [
+        {
+          "user": {
+            "name": "Sophie",
+            "profile_photo": ""
+          },
+          "comment": "Ce tapis est incroyablement doux et moelleux. Il ajoute une atmosphère chaleureuse à ma chambre."
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "Miroir Mural Design",
+      "description": "Un miroir mural au design contemporain pour agrandir l'espace et embellir votre intérieur.",
+      "type": "miroir",
+      "brand": "ContemporaryMirror",
+      "price": 149.99,
+      "material": "Verre et Métal",
+      "promotion": false,
+      "percentage_promotion": 0,
+      "rating": 4.5,
+      "available_colors": ["Noir", "Blanc", "Argent"],
+      "photos": ["", "", "", ""],
+      "comment": [
+        {
+          "user": {
+            "name": "Julien",
+            "profile_photo": ""
+          },
+          "comment": "Ce miroir est très élégant et il donne l'impression d'agrandir la pièce."
         }
       ]
     }

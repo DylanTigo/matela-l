@@ -5,7 +5,7 @@ import { HalfStar } from "../Star/HalfStar";
 
 export default function LandingCard({productDetail, img}) {
   return (
-    <article className="landingArticle">
+    <article className="landingArticle col-6">
       <a href={productDetail}>
         <img
           src={img}

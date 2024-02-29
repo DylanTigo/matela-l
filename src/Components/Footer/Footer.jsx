@@ -2,10 +2,10 @@ import { Logo } from "../Logo/Logo";
 
 export function Footer() {
   return (
-    <footer className="footer">
-      <div className="container1 d-flex">
-        <Logo height="auto" />
-        <div className="newletterContainer">
+    <footer className="footer overflow-hidden p-3 px-md-0">
+      <div className="container1 d-flex flex-sm-row  flex-column gap-2">
+        <Logo height="60px" />
+        <div className="newletterContainer m-0 justify-content-center align-items-center ">
           <h6 className=" text-center">
             Recevrez les dernieres promotions en exclisivite en soucrivant a
             notre Newsletter !
@@ -40,8 +40,8 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className=" mt-4 container2 d-flex align-items-start gap-5">
-        <ul className="list list-unstyled d-flex justify-content-center flex-column row-gap-3">
+      <div className=" mt-4 container2 d-flex align-items-start gap-2 gap-md-5">
+        <ul className="list list-unstyled d-flex justify-content-center flex-column row-gap-1 row-gap-md-3">
           <li className="fw-bold">Navigation Rapide</li>
           <li>
             <a href="#">Accueil</a>
@@ -53,7 +53,7 @@ export function Footer() {
             <a href="#">Recherche de meuble</a>
           </li>
         </ul>
-        <ul className="list list-unstyled d-flex justify-content-center flex-column row-gap-3">
+        <ul className="list list-unstyled d-flex justify-content-center flex-column row-gap-1 row-gap-md-3">
           <li className="fw-bold">Service Client</li>
           <li>
             <a href="#">Nous contacter</a>
@@ -65,7 +65,7 @@ export function Footer() {
             <a href="#">Garantie</a>
           </li>
         </ul>
-        <ul className="list list-unstyled d-flex justify-content-center flex-column row-gap-3">
+        <ul className="list list-unstyled d-flex justify-content-center flex-column row-gap-1 row-gap-md-3">
           <li className="fw-bold">Informations Legales</li>
           <li>
             <a href="#">Mentions légales</a>
@@ -83,9 +83,8 @@ export function Footer() {
             <a href="#">Politique de confidentialité</a>
           </li>
         </ul>
-        <div className="d-flex justify-content-center flex-column row-gap-2">
-          <p className="fw-bold">Reseaux Sociaux</p>
-          <ul className="list-unstyled d-flex justify-content-center column-gap-3 ">
+        <div className="d-flex justify-content-center">
+          <ul className="list-unstyled d-flex justify-content-center column-gap-2 flex-wrap">
             <li>
               <a href="#">
                 <svg
@@ -134,8 +133,6 @@ export function Footer() {
                 </svg>
               </a>
             </li>
-          </ul>
-          <ul className="list-unstyled d-flex justify-content-center column-gap-3">
             <li>
               <a href="#">
                 <svg

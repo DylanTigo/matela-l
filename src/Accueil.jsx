@@ -1,5 +1,4 @@
 import { Button } from "./Components/Button/Button";
-import { Header } from "./Components/Header/Header";
 import { Slider } from "./Components/Slider/Slider";
 import { LuArrowRight } from "react-icons/lu";
 import { SearchBar } from "./Components/SearchBar/SearchBar";
@@ -13,13 +12,12 @@ import img from "../src/assets/chair.jpg";
 import promoImg1 from "../src/assets/promoImg1.jpg";
 import promoImg2 from "../src/assets/promoImg2.jpg";
 import promoImg from "./assets/promoImg.jpg";
-import { Footer } from "./Components/Footer/Footer";
 import LandingCard from "./Components/Card/LandingCard";
 
 export function Accueil(){
     return (
         <>
-          <Header />
+          
           <main className="container-fluid p-0 w-100">
             <section className="position-relative" id="hero">
               <Slider className="mb-1 w-100 z-0" />
@@ -108,8 +106,8 @@ export function Accueil(){
                   src={promoImg}
                   alt="Best Deal"
                 />
-                <div className="col-12 col-lg-6 row ">
-                  <div className=" col-12 d-flex flex-row justify-content-center gap-2 ">
+                <div className="col-12 col-lg-6">
+                  <div className=" col-12 d-flex justify-content-center gap-2 flex-sm-row  ">
                     <LandingCard img={promoImg1} />
                     <LandingCard img={promoImg2} />
                   </div>
@@ -128,7 +126,6 @@ export function Accueil(){
               </div>
             </section>
           </main>
-          <Footer/>
         </>
       );
 }
