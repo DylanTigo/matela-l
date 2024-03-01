@@ -11,7 +11,7 @@ import { getRatingStars, showCurrentPrice, disponibility } from "./utils";
 import img1 from "./assets/imgSofa/img1.jpg";
 import img2 from "./assets/imgSofa/img2.jpg";
 import img3 from "./assets/imgSofa/img3.jpg";
-import img4 from "./assets/imgSofa/img4.jpg"
+import img4 from "./assets/imgSofa/Img4.jpg"
 import favorite from "./assets/favorite.svg";
 import { LuShoppingCart } from "react-icons/lu";
 
