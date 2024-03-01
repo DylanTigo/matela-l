@@ -7,12 +7,12 @@ import { NavIcon } from "../NavIcon/NavIcon";
 import { Button } from "../Button/Button";
 import { Link } from "react-router-dom";
 
-export function Header({ onSearch }) {
+export function Header() {
   return (
     <header className="header container-fluid pt-1 mb-3 flex-nowrap flex-md-wrap">
       <div className="navbar">
         <Logo className=" navbar-brand" />
-        <SearchBar onSearch={onSearch} />
+        <SearchBar />
         <nav className="navIconGroup ">
           <NavIcon icon={<LuMenu />} />
           <NavIcon icon={<LuHeart />} />
@@ -22,14 +22,14 @@ export function Header({ onSearch }) {
       </div>
       <div className="d-flex justify-content-center flex-wrap column-gap-3 row-gap-2">
         <Link></Link>
-        <Button content="Matelas" btnType="dropdown" />
-        <Button content="Salle a manger" btnType="dropdown" />
-        <Button content="Table" btnType="dropdown" />
-        <Button content="Bureaux" btnType="dropdown" />
-        <Button content="Lits" btnType="dropdown" />
-        <Button content="equipement Mixtes" btnType="dropdown" />
+        <Button btnType="dropdown">Matela</Button>
+        <Button btnType="dropdown">Salle a manger</Button>
+        <Button btnType="dropdown">Table</Button>
+        <Button btnType="dropdown">Bureau</Button>
+        <Button btnType="dropdown">Lits</Button>
+        <Button btnType="dropdown">Equipements Mixtes</Button>
         <div className=" d-inline">
-          <Button content="Promotions" />
+          <Button>Promotions</Button>
         </div>
       </div>
     </header>

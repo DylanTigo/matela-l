@@ -31,6 +31,10 @@ $theme-colors: (
   "danger": #fe2a72,
 );
 
+a {
+  color: #222222;
+}
+
 .navIcon {
   display: flex;
   justify-content: center;
@@ -57,7 +61,7 @@ $theme-colors: (
   overflow: hidden;
 
   &:focus-within {
-    outline: 1px solid $dark;
+    outline: 1px solid $primary;
   }
 
   input {
@@ -126,18 +130,6 @@ $theme-colors: (
   border: none !important;
   border-radius: 50% !important;
   position: relative;
-
-  // &::after {
-  //   content: "";
-  //   position: absolute;
-  //   width: 115%;
-  //   height: 115%;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translate(-50%, -50%);
-  //   border: 1px solid red;
-  //   border-radius: 999px;
-  // }
 }
 .carousel {
   a {
@@ -220,6 +212,9 @@ $theme-colors: (
     }
   }
 }
+#promotion .landingArticle {
+  background-color: $secondary;
+}
 .getInTouchContainer {
   background-image: url(../assets/getIntouchBG.jpg);
   background-size: cover;
@@ -279,6 +274,7 @@ $theme-colors: (
     border: none;
   }
 }
+
 .filter {
   display: inline-block;
   padding: 10px;
@@ -334,21 +330,18 @@ $theme-colors: (
     flex-wrap: wrap;
   }
 }
-::-webkit-scrollbar-thumb{
-  background: #000;
-}
-.productDetail {
 
-  .imgSliderP{
+.productDetail {
+  .imgSliderP {
     width: 50%;
-    
-    .mainImg{
+
+    .mainImg {
       position: relative;
       width: 100%;
       max-height: 75vh;
       overflow-y: scroll;
       border-radius: 10px;
-  
+
       .currentImg {
         width: auto;
         object-fit: cover;
@@ -363,7 +356,7 @@ $theme-colors: (
         display: flex;
         justify-content: space-between;
         align-items: center;
-    
+
         span {
           width: 50px;
           height: 50px;
@@ -373,7 +366,7 @@ $theme-colors: (
         }
       }
     }
-    ul{
+    ul {
       display: grid;
       align-items: center;
       grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -386,7 +379,7 @@ $theme-colors: (
       overflow: hidden;
       display: flex;
       align-items: center;
-  
+
       img {
         width: 100%;
         object-fit: cover;
@@ -401,27 +394,26 @@ $theme-colors: (
     margin: 0 auto;
     width: 50%;
 
-    .favorite img{
+    .favorite img {
       width: 40px;
       height: 40px;
       padding: 10px;
       background-color: #e1dcdc;
       border-radius: 9999px;
-      
     }
-    .colors{
+    .colors {
       display: flex;
       gap: 10px;
 
-      .couleur{
+      .couleur {
         width: 25px;
         height: 25px;
         border-radius: 9999px;
         border: none;
         position: relative;
 
-        &.selected{
-          &::after{
+        &.selected {
+          &::after {
             content: "";
             width: calc(100% + 5px);
             height: calc(100% + 5px);
@@ -432,20 +424,19 @@ $theme-colors: (
             left: 50%;
             transform: translate(-50%, -50%);
           }
-
         }
       }
     }
-    .addProductBtn{
+    .addProductBtn {
       background-color: #f82833;
       border-radius: 9999px;
       color: #ffffff;
     }
   }
 }
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .productDetail .imgSliderP,
-  .productDetail .detailContainer{
+  .productDetail .detailContainer {
     width: 100%;
   }
 }

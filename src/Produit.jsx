@@ -4,6 +4,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import datas from "../product.json";
+import { Link } from "react-router-dom";
+import { ProductCard } from "./Components/Card/ProductCard";
 import { getRatingStars, showCurrentPrice, disponibility } from "./utils";
 
 import img1 from "./assets/imgSofa/img1.jpg";
@@ -15,12 +17,12 @@ import { LuShoppingCart } from "react-icons/lu";
 
 export default function Produit() {
   const params = useParams();
-  const product =
-    datas.products.find((product) => product.id === +params.id) || {};
+  const product = datas.products.find((product) => product.id === +params.id) || {};
   const [currentImg, setCurrentImg] = useState(img1);
+  let recommendationList = datas.products.filter(prod => prod.type === product.type || prod.brand == product.brand )
+  recommendationList = recommendationList.filter(prod => prod.id !== product.id)
 
   const [color, dispoInfo] = disponibility();
-  console.log(product.comment.length);
   function changeImg(img) {
     setCurrentImg(img);
   }
@@ -112,6 +114,14 @@ export default function Produit() {
               </span>
             </button>
           </div>
+        </div>
+      </section>
+      <section className="recommendation bg-secondary p-4">
+        <h2 className="mb-2">Vous pourriez également aimer</h2>
+        <div className="recommendationList d-flex gap-3 overflow-x-scroll ">
+          {recommendationList.length ? recommendationList?.map((prod) => (
+            <ProductCard product={product} key ={prod.id}/>
+          )) :  <p className=" text-center ">Pas de produit trouvé pour cette recherche</p>}
         </div>
       </section>
     </main>

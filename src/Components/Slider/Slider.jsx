@@ -1,6 +1,6 @@
 import "../../css/main.scss";
 import { Carousel } from "react-bootstrap";
-import img1 from "../../assets/SliderImg/salon1.jpeg";
+import img1 from "../../assets/SliderImg/salon1.jpg";
 import img2 from "../../assets/SliderImg/salon2.jpg";
 import img3 from "../../assets/SliderImg/salle-a-mage.jpg";
 import img4 from "../../assets/SliderImg/bureau.jpg";
@@ -8,7 +8,7 @@ import img4 from "../../assets/SliderImg/bureau.jpg";
 export function Slider() {
   return (
       <Carousel>
-        <Carousel.Item interval={300000}>
+        <Carousel.Item interval={3000}>
           <img
             src={img1}
             alt="Salon avec chaise et sofa"

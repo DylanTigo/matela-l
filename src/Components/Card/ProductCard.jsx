@@ -13,7 +13,7 @@ export function ProductCard({ product }) {
 
   return (
     <article className="landingArticle w-auto h-auto">
-      <Link to={"/produit/"+ product.name} style={{textDecoration: "none", color: "inherit"}} href={product.id}>
+      <Link to={`/produit/${product.id}`} style={{textDecoration: "none", color: "inherit"}} href={product.id}>
         <img
           src={product.photos[0] ? product.photos[0] : defaultImg}
           alt={`Image de ${product.name}`}

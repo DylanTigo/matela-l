@@ -2,10 +2,12 @@
 import { Footer } from "./Components/Footer/Footer";
 import { Accordion } from "react-bootstrap";
 import { ProductCard } from "./Components/Card/ProductCard";
+import datas  from "../product.json";
 
 
-export function Rechercher({filteredProduct}) {
-  
+export function Rechercher() {
+  const productList = datas.products;
+
   return (
     <>
       <div className=" d-flex">
@@ -82,7 +84,7 @@ export function Rechercher({filteredProduct}) {
           </div>
           <div className="firstCardContainer">
             <div className="cardContainer mt-3 px-3 py-4 gap-3">
-              {filteredProduct.length ? filteredProduct.map((product, index) => (
+              {productList.length ? productList.map((product, index) => (
                 <ProductCard product={product} key={product.name + index} />
               )) : <p className=" text-center ">Pas de produit trouvé pour cette recherche</p>}
             </div>
