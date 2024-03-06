@@ -126,7 +126,7 @@ export default function Produit() {
       </section>
       <section className="recommendation bg-secondary p-4">
         <h2 className="mb-2">Vous pourriez également aimer</h2>
-        <div className="recommendationList d-flex gap-3 overflow-x-scroll ">
+        <div className="recommendationList d-flex gap-3">
           {recommendationList.length ? (
             recommendationList?.map((prod) => (
               <ProductCard product={prod} key={prod.id} />
