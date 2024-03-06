@@ -19,6 +19,7 @@ export default function Produit() {
   const params = useParams();
   const product =
     datas.products.find((product) => product.id === +params.id) || {};
+
   const [currentImg, setCurrentImg] = useState(img1);
   let recommendationList = datas.products.filter(
     (prod) => prod.type === product.type || prod.brand == product.brand
@@ -60,7 +61,7 @@ export default function Produit() {
           </ul>
         </div>
         <div className="detailContainer">
-          <div className="w-75 mx-auto d-flex flex-column gap-3">
+          <div className="w-75 mx-auto d-flex flex-column gap-3 details">
             <h2 className=" h2 d-flex justify-content-between align-items-center ">
               {product.name}{" "}
               <span className="favorite">
@@ -131,7 +132,7 @@ export default function Produit() {
               <ProductCard product={prod} key={prod.id} />
             ))
           ) : (
-            <p className=" text-center ">
+            <p className=" text-center flex-grow-1 my-5 ">
               Pas de produit trouvé pour cette recherche
             </p>
           )}

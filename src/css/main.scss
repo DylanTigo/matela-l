@@ -32,7 +32,8 @@ $theme-colors: (
 );
 
 a {
-  color: #222222;
+  color: #222222 !important;
+  text-decoration: none !important;
 }
 
 .navIcon {
@@ -343,13 +344,16 @@ a {
     .mainImg {
       position: relative;
       width: 100%;
-      max-height: 75vh;
-      overflow-y: scroll;
+      min-height: 400px;
+      overflow-y: hidden;
       border-radius: 10px;
+      display: flex;
+      aspect-ratio: 3/2;
+      align-items: center;
 
       .currentImg {
-        width: auto;
-        object-fit: cover;
+        display: block;
+        margin-inline: auto;
         object-position: center;
       }
       .sliderBtn {
@@ -443,6 +447,9 @@ a {
   .productDetail .imgSliderP,
   .productDetail .detailContainer {
     width: 100%;
+  }
+  .productDetail .detailContainer .details{
+    width: 100% !important;
   }
 }
 

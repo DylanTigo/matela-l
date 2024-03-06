@@ -4,6 +4,7 @@ import { Slider } from "./Components/Slider/Slider";
 import { LuArrowRight } from "react-icons/lu";
 import { SearchBar } from "./Components/SearchBar/SearchBar";
 import { Link } from "react-router-dom";
+import datas from "../product.json"
 
 //image
 import chaise from "./assets/chair.jpg";
@@ -17,6 +18,8 @@ import promoImg from "./assets/promoImg.jpg";
 import LandingCard from "./Components/Card/LandingCard";
 
 export function Accueil() {
+  const products = datas.products
+  console.log(products);
   return (
     <>
       <main className="container-fluid p-0 w-100">
@@ -92,9 +95,9 @@ export function Accueil() {
         >
           <h2 className="h1 text-center mb-3 ">Best Sellers</h2>
           <div className=" d-flex justify-content-center align-items-center flex-wrap  gap-lg-3 gap-2 ">
-            <LandingCard img={img} />
-            <LandingCard img={img} />
-            <LandingCard img={img} />
+            <LandingCard product={products[1]} img={img} />
+            <LandingCard product={products[8]} img={img} />
+            <LandingCard product={products[4]} img={img} />
           </div>
         </section>
         <section
@@ -110,12 +113,12 @@ export function Accueil() {
             />
             <div className="col-12 col-lg-6 mt-0 mt-md-2 ">
               <div className=" col-12 d-flex justify-content-center gap-2 flex-sm-row  ">
-                <LandingCard img={promoImg1} />
-                <LandingCard img={promoImg2} />
+                <LandingCard product={products[9]} img={promoImg1} />
+                <LandingCard product={products[11]} img={promoImg2} />
               </div>
               <div className=" col-12 d-flex flex-row justify-content-center gap-2 mt-2 ">
-                <LandingCard img={promoImg1} />
-                <LandingCard img={promoImg2} />
+                <LandingCard product={products[3]} img={promoImg1} />
+                <LandingCard product={products[5]} img={promoImg2} />
               </div>
             </div>
           </div>

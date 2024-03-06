@@ -7,6 +7,7 @@ import {getRatingStars, showCurrentPrice, disponibility} from "../../utils.jsx";
 export function ProductCard({ product }) {
   
   const [color, dipoInfo] = disponibility();
+  
 
   const ratingStars = getRatingStars(product);
   const currentPrice = showCurrentPrice(product); 

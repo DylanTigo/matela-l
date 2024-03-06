@@ -4,7 +4,7 @@ import { LuChevronDown } from "react-icons/lu";
 
 // eslint-disable-next-line react/prop-types
 export function Button({children, btnType }) {
-  console.log(children);
+  
   if (btnType === "secondary") {
     return (
       <>

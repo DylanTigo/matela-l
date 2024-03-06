@@ -6,6 +6,7 @@ const promotionPourcentage = 30 / 100
 
 
 export function getRatingStars (product) {
+  // console.log(product);
   const stars = [];
   const nbrFullstar = Math.floor(product.rating);
   const nbrEmptystar = 5 - Math.ceil(product.rating);
